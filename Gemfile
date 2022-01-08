@@ -66,6 +66,16 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'database_cleaner'
+  gem 'factory_bot_rails', require: false
+  gem 'poltergeist', '>= 1.18.1'
+  gem 'rspec-mocks', '~> 3.4'
+  gem 'rspec-rails'
+  gem 'rspec_junit_formatter'
+  gem 'shoulda-matchers'
+  gem 'timecop'
+  gem 'twilio-test-toolkit', '>= 3.4.0'
+  gem 'webmock'
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
