@@ -1,0 +1,1 @@
+= link_to "#{@order.order_items.size - 1} items with Sales Taxes: #{@order.sales_taxes} $ and Total: #{@order.total? ? (@order.total).round(2) : 0} $", order_path(@order)
