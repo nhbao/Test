@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   resources :shops, only:[:index]
   resource :cards, only:[:show]
+  resources :export_orders, only: :index
   root 'shops#index'
 end
