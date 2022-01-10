@@ -31,3 +31,9 @@
 
 en:
   hello: "Hello world"
+  header_csv:
+    quantity: 'Quantity'
+    name: 'Product'
+    price: 'Price'
+    sales_taxes: 'Sales Taxes'
+    total: 'Total'
