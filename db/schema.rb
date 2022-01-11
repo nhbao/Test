@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2022_01_08_093304) do
     t.integer "product_id"
     t.integer "order_id"
     t.decimal "total", precision: 7, scale: 2
-    t.decimal "unit_price", precision: 7, scale: 2
+    t.decimal "price", precision: 7, scale: 2
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -31,8 +31,7 @@ ActiveRecord::Schema.define(version: 2022_01_08_093304) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.decimal "price", precision: 7, scale: 2
-    t.integer "tax", default: 0
+    t.decimal "tax", default: "0.0"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

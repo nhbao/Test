@@ -15,7 +15,7 @@ class ExportOrdersController < ApplicationController
     @order = Order.find(params[:id])
     @order_arr = []
     @order.order_items.each do |i|
-      @order_arr << {quantity: i.quantity, name: i.product.name, price: i.total.round(2)}
+      @order_arr << {quantity: i.quantity, name: i.product.name, price: i.price}
     end
     @order_arr << {sales_taxes: @order.sales_taxes, total: @order.total.round(2)}
   end

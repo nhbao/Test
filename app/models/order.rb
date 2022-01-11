@@ -6,10 +6,11 @@ class Order < ApplicationRecord
   CSV_ATTRIBUTES_ORDER = %w(sales_taxes total).freeze
 
   def sales_taxes
-    order_items.collect{ |i| i.valid? ? 
-                         ((i.total - i.product.price * i.quantity) * 20).round / 20.0 :
+    taxes = order_items.collect{ |i| i.valid? ? 
+                         (i.price - (i.price / (1 + i.product.tax/100))) * i.quantity  :
                          0
-                       }.sum
+                       }.sum 
+    (taxes * 20).round / 20.0
   end
   
   def total
@@ -18,7 +19,7 @@ class Order < ApplicationRecord
                          0
                        }.sum
   end
-
+  # ((i.price - (i.price / (1 + i.product.tax/100))) * i.quantity * 20).round / 20.0
   private
 
   def set_total

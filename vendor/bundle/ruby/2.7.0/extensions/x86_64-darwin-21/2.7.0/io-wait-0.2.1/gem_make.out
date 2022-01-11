@@ -1,0 +1,18 @@
+current directory: /Users/baonguyenhuu/test/Test/SALES/vendor/bundle/ruby/2.7.0/gems/io-wait-0.2.1/ext/io/wait
+/Users/baonguyenhuu/.rvm/rubies/ruby-2.7.2/bin/ruby -I /Users/baonguyenhuu/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0 -r ./siteconf20220111-34092-z9wi2i.rb extconf.rb
+checking for rb_io_wait()... no
+checking for sys/ioctl.h... yes
+checking for FIONREAD in sys/ioctl.h,sys/ioctl.h... yes
+creating Makefile
+
+current directory: /Users/baonguyenhuu/test/Test/SALES/vendor/bundle/ruby/2.7.0/gems/io-wait-0.2.1/ext/io/wait
+make "DESTDIR=" clean
+
+current directory: /Users/baonguyenhuu/test/Test/SALES/vendor/bundle/ruby/2.7.0/gems/io-wait-0.2.1/ext/io/wait
+make "DESTDIR="
+compiling wait.c
+linking shared-object io/wait.bundle
+
+current directory: /Users/baonguyenhuu/test/Test/SALES/vendor/bundle/ruby/2.7.0/gems/io-wait-0.2.1/ext/io/wait
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 wait.bundle ./.gem.20220111-34092-5youqt/io
